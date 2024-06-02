@@ -62,7 +62,7 @@ class Blockchain {
         return true;
     }
 
-    // Print the entire blockchain
+    // print the entire chain
     printBlockchain() {
         let currentBlock = this.head;
         while (currentBlock != null) {
@@ -82,12 +82,12 @@ class Blockchain {
 }
 
 
-// Creating the blockchain
+// init the chain
 let blockchain = new Blockchain();
 
-// Adding blocks to the blockchain
+// add blocks to chain
 blockchain.addBlock(new Block(1, new Date(), { amount: 4 }));
 blockchain.addBlock(new Block(2, new Date(), { amount: 10 }));
 
-// Print the blockchain
+// print the chain
 blockchain.printBlockchain();
