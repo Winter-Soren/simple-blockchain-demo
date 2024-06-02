@@ -24,7 +24,15 @@ class Blockchain {
 
     // create the genesis block
     createGenesisBlock() {
-        return new Block(0, new Date(), 'Genesis Block', '0');
+        const genesisBlockData = {
+            chainID: 0,
+            transactions: [],
+            consensus: 'PoW',
+            difficulty: 0,
+            nonce: 0
+        };
+
+        return new Block(0, new Date(), JSON.stringify(genesisBlockData), '0');
     }
 
     // add a new block to the blockchain
